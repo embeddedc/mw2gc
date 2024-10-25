@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "mw2gc"
+version = "0.1.0"
+description = "Autosync MyWhoosh activities with Garmin Connect"
+authors = ["embeddedc"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/embeddedc/mw2gc"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fit-tool = "^0.9.13"
+requests = "^2.32.3"
+pycryptodome = "^3.21.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+autohooks = "^24.2.0"
+autohooks-plugin-black = "^23.10.0"
+autohooks-plugin-ruff = "^24.1.0"
+autohooks-plugin-isort = "^23.10.0"
+
+[tool.autohooks]
+pre-commit = ["autohooks.plugins.isort", "autohooks.plugins.black", "autohooks.plugins.ruff"]
+mode = "poetry"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

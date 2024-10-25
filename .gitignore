@@ -1,5 +1,7 @@
 .venv/
-enviroment.sh
+.env
+*.xcodeproj/
+poetry.lock
 
 .DS_Store
 
